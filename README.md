@@ -3,7 +3,7 @@
 1. Alejandra Núñez **(androimeda)**
 1. Antonio Aguilar **(jaguilar992)**
 1. Ariel Guardado **(EliteArmy)**
-1. Christian Flores**(ChristhianFlores)**
+1. Christhian Flores**(ChristhianFlores)**
 1. Nicolle Valladares **(nicollev7)**
 
 [TOC]
