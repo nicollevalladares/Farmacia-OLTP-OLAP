@@ -25,7 +25,7 @@ CREATE TABLE cliente (
 CREATE TABLE descuento (
   id_descuento INT NOT NULL PRIMARY KEY,
   descripcion VARCHAR(45) NOT NULL,
-  valor DOUBLE UNSIGNED NOT NULL,
+  valor FLOAT NOT NULL,
   estado VARCHAR(1) NOT NULL,
 )
 -- Tabla empleado
@@ -84,10 +84,12 @@ CREATE TABLE forma_pago (
 CREATE TABLE factura (
   id_factura INT NOT NULL PRIMARY KEY,
   fecha DATE NULL DEFAULT NULL,
-  coste_total DOUBLE NOT NULL,
+  costo_total FLOAT NOT NULL,
   observacion VARCHAR(250) NULL DEFAULT NULL,
+  id_empleado INT NOT NULL,
   id_cliente INT NOT NULL,
   id_forma_pago INT NOT NULL,
+  CONSTRAINT FK_empleadofac1 FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
   CONSTRAINT fk_Factura_Cliente1 FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente),
   CONSTRAINT fk_Factura_FormaPago1 FOREIGN KEY (id_forma_pago) REFERENCES forma_pago (id_forma_pago)
 )
@@ -107,7 +109,7 @@ CREATE TABLE presentacion (
 CREATE TABLE impuesto (
   id_impuesto INT NOT NULL PRIMARY KEY,
   impuesto VARCHAR(45) NOT NULL,
-  valor INT UNSIGNED NOT NULL,
+  valor INT NOT NULL,
   estado VARCHAR(45) NOT NULL,
   fecha_inicio DATE NOT NULL,
 )
@@ -127,8 +129,8 @@ CREATE TABLE lote (
   id_lote INT NOT NULL PRIMARY KEY,
   id_producto INT NOT NULL,
   lote VARCHAR(100) NOT NULL,
-  precio_costo DOUBLE GENERATED ALWAYS AS () VIRTUAL,
-  precio_venta DOUBLE UNSIGNED NOT NULL,
+  precio_costo FLOAT NOT NULL,
+  precio_venta FLOAT NOT NULL,
   fecha_elaboracion DATE NOT NULL,
   fecha_vecimiento DATE NOT NULL,
   CONSTRAINT fk_lote_producto1 FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
@@ -136,7 +138,7 @@ CREATE TABLE lote (
 -- Tabla detalle_factura
 CREATE TABLE detalle_factura (
   id_factura INT NOT NULL PRIMARY KEY,
-  cantidad INT UNSIGNED NOT NULL,
+  cantidad INT NOT NULL,
   id_lote INT NOT NULL,
   CONSTRAINT fk_FacturaDetalle_Factura1 FOREIGN KEY (id_factura) REFERENCES factura (id_factura),
   CONSTRAINT fk_detalle_factura_lote1 FOREIGN KEY (id_lote) REFERENCES lote (id_lote)
@@ -161,7 +163,7 @@ CREATE TABLE tipo_movimiento_producto (
 )
 -- Tabla movimiento_producto
 CREATE TABLE movimiento_producto (
-  id_movimiento INT UNSIGNED NOT NULL PRIMARY KEY,
+  id_movimiento INT NOT NULL PRIMARY KEY,
   fecha DATE NOT NULL,
   id_tipo_movimiento INT NOT NULL,
   id_empleado INT NOT NULL,
@@ -195,8 +197,8 @@ CREATE TABLE telefono_sucursal (
 )
 -- Tabla detalle_movimiento
 CREATE TABLE detalle_movimiento (
-  id_movimiento INT UNSIGNED NOT NULL,
-  cantidad INT UNSIGNED NOT NULL,
+  id_movimiento INT NOT NULL,
+  cantidad INT NOT NULL,
   id_lote INT NOT NULL,
   CONSTRAINT fk_producto_por_movimiento_producto_movimiento_producto1 FOREIGN KEY (id_movimiento) REFERENCES movimiento_producto (id_movimiento),
   CONSTRAINT fk_detalle_movimiento_lote1 FOREIGN KEY (id_lote) REFERENCES lote (id_lote)
@@ -205,7 +207,7 @@ CREATE TABLE detalle_movimiento (
 CREATE TABLE lote_estante (
   id_estante INT NOT NULL,
   id_lote INT NOT NULL,
-  cantidad INT UNSIGNED NOT NULL,
+  cantidad INT NOT NULL,
   CONSTRAINT fk_estante_has_lote_estante1 FOREIGN KEY (id_estante) REFERENCES estante (id_estante),
   CONSTRAINT fk_estante_has_lote_lote1 FOREIGN KEY (id_lote) REFERENCES lote (id_lote)
 )
