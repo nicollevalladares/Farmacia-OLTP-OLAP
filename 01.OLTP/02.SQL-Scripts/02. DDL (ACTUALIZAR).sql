@@ -35,6 +35,7 @@ CREATE TABLE empleado (
   id_persona INT NOT NULL,
   contraseña VARCHAR(512) NOT NULL,
   foto_url VARCHAR(100) NULL,
+  estado VARCHAR(1) NOT NULL,
   CONSTRAINT fk_empleado_persona1 FOREIGN KEY (id_persona) REFERENCES persona (id_persona)
 )
 -- Tabla pais
@@ -83,6 +84,7 @@ CREATE TABLE forma_pago (
 CREATE TABLE factura (
   id_factura INT NOT NULL PRIMARY KEY,
   fecha DATE NULL DEFAULT NULL,
+  coste_total DOUBLE NOT NULL,
   observacion VARCHAR(250) NULL DEFAULT NULL,
   id_cliente INT NOT NULL,
   id_forma_pago INT NOT NULL,
