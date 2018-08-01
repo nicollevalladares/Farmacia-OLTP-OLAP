@@ -1178,4 +1178,3 @@ INSERT INTO presentacion (id_presentacion, presentacion) VALUES (1177  , 'X 60 M
 INSERT INTO presentacion (id_presentacion, presentacion) VALUES (1178  , 'X 7 CMPR');
 INSERT INTO presentacion (id_presentacion, presentacion) VALUES (1179  , 'X 8 CAPS');
 INSERT INTO presentacion (id_presentacion, presentacion) VALUES (1180  , 'X 80 CMPR.');
-COMMIT;

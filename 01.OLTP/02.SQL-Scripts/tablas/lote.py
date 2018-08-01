@@ -23,7 +23,7 @@ for i in range(1,2004):
     #print precio_costo,
     #print precio_venta
     
-    a = 'INSERT INTO producto(id_lote,id_producto,lote,fecha_elaboracion,fecha_vecimiento,precio_costo,precio_venta) VALUES('
+    a = 'INSERT INTO lote(id_lote,id_producto,lote,fecha_elaboracion,fecha_vecimiento,precio_costo,precio_venta) VALUES('
     a+=str(id_lote)+","
     a+=str(id_producto)+","
     a+="'"+lote+"'"+","

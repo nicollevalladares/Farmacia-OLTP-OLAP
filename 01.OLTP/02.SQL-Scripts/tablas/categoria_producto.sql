@@ -374,4 +374,3 @@ INSERT INTO categoria_producto (id_categoria, categoria) VALUES (373 ,'vitamina 
 INSERT INTO categoria_producto (id_categoria, categoria) VALUES (374 ,'vitamina k (fitomenadiona)');
 INSERT INTO categoria_producto (id_categoria, categoria) VALUES (375 ,'warfarina');
 INSERT INTO categoria_producto (id_categoria, categoria) VALUES (376 ,'xilometazolina');
-COMMIT;

@@ -1,3 +1,8 @@
+CREATE DATABASE Farmacia
+GO
+USE Farmacia
+GO
+
 -- Tabla categoria_producto
 CREATE TABLE categoria_producto (
   id_categoria INT NOT NULL PRIMARY KEY,
@@ -33,7 +38,7 @@ CREATE TABLE empleado (
   id_empleado INT NOT NULL PRIMARY KEY,
   fecha_nombramiento DATE NULL DEFAULT NULL,
   id_persona INT NOT NULL,
-  contraseña VARCHAR(512) NOT NULL,
+  contrasena VARCHAR(512) NOT NULL,
   foto_url VARCHAR(100) NULL,
   estado VARCHAR(1) NOT NULL,
   CONSTRAINT fk_empleado_persona1 FOREIGN KEY (id_persona) REFERENCES persona (id_persona)
@@ -109,7 +114,7 @@ CREATE TABLE presentacion (
 CREATE TABLE impuesto (
   id_impuesto INT NOT NULL PRIMARY KEY,
   impuesto VARCHAR(45) NOT NULL,
-  valor INT NOT NULL,
+  valor FLOAT NOT NULL,
   estado VARCHAR(45) NOT NULL,
   fecha_inicio DATE NOT NULL,
 )
@@ -137,7 +142,7 @@ CREATE TABLE lote (
 )
 -- Tabla detalle_factura
 CREATE TABLE detalle_factura (
-  id_factura INT NOT NULL PRIMARY KEY,
+  id_factura INT NOT NULL,
   cantidad INT NOT NULL,
   id_lote INT NOT NULL,
   CONSTRAINT fk_FacturaDetalle_Factura1 FOREIGN KEY (id_factura) REFERENCES factura (id_factura),
@@ -146,7 +151,7 @@ CREATE TABLE detalle_factura (
 -- Tabla laboratorio
 CREATE TABLE laboratorio (
   id_laboratorio INT NOT NULL PRIMARY KEY,
-  nombre_laboratorio VARCHAR(45) NOT NULL,
+  nombre_laboratorio VARCHAR(255) NOT NULL,
 )
 -- Tabla medicamentos
 CREATE TABLE medicamentos (
@@ -167,12 +172,12 @@ CREATE TABLE movimiento_producto (
   fecha DATE NOT NULL,
   id_tipo_movimiento INT NOT NULL,
   id_empleado INT NOT NULL,
-  estante_id_estante_origen INT NOT NULL,
-  estante_id_estante_destino INT NOT NULL,
+  id_estante_origen INT NOT NULL,
+  id_estante_destino INT NOT NULL,
   CONSTRAINT fk_movimiento_producto_tipo_movimiento1 FOREIGN KEY (id_tipo_movimiento) REFERENCES tipo_movimiento_producto (id_tipo_movimiento),
   CONSTRAINT fk_movimiento_producto_empleado1 FOREIGN KEY (id_empleado) REFERENCES empleado (id_empleado),
-  CONSTRAINT fk_movimiento_producto_estante1 FOREIGN KEY (estante_id_estante_origen) REFERENCES estante (id_estante),
-  CONSTRAINT fk_movimiento_producto_estante2 FOREIGN KEY (estante_id_estante_destino) REFERENCES estante (id_estante)
+  CONSTRAINT fk_movimiento_producto_estante1 FOREIGN KEY (id_estante_origen) REFERENCES estante (id_estante),
+  CONSTRAINT fk_movimiento_producto_estante2 FOREIGN KEY (id_estante_destino) REFERENCES estante (id_estante)
 )
 -- Tabla telefono
 CREATE TABLE telefono (
