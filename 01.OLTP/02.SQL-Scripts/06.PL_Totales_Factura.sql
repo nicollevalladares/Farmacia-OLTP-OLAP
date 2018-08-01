@@ -1,3 +1,4 @@
+GO
 DECLARE
   @factura INT, @total FLOAT
 DECLARE
@@ -21,3 +22,4 @@ BEGIN
     FETCH c_totales INTO @factura, @total
   END
 END
+GO

@@ -1,3 +1,4 @@
+Use Farmacia;
 GO
 DECLARE
 	@sucursal INT, @lote INT, @estante INT, @qt INT

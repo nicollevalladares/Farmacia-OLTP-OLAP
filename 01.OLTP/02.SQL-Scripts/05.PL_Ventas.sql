@@ -1,4 +1,3 @@
-USE Farmacia;
 GO
 DECLARE
   @i INT = 1, @j INT = 1,
@@ -40,3 +39,4 @@ BEGIN
 		SET	@i = @i + 1;
 	END
 END
+GO
