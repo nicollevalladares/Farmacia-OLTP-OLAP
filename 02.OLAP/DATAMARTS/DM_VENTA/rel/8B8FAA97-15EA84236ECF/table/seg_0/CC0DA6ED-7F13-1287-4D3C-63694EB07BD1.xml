@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC0DA6ED-7F13-1287-4D3C-63694EB07BD1" name="DIM_TIEMPO">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 19:58:36 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tiempo" id="708C460B-B2C2-CB4E-B7DB-91F85D3B91F8">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dia" id="D4961669-02C8-450A-6196-83B9BD5E5D6D">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mes" id="58F819FD-B379-F43D-376B-F2B680343E5D">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="año" id="B72F25B5-C6BA-2E76-CA43-15E3181F4BA7">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trimestre" id="83A4DA29-A441-29B0-83CB-188BEBE1F7E4">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="venta" id="13BFC38C-63A9-830F-6964-FA01C6E34B7B">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:00:39 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CFF1937-4D95-5729-ADD7-D4BDC77FF7C3" name="DIM_TIEMPO_PK">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:03:18 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="708C460B-B2C2-CB4E-B7DB-91F85D3B91F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C1F5427A-8648-4851-44CF-BBE7E6D2278F" name="DIM_LAB">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:18:26 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_lab" id="8D94BA19-8656-D6CE-2284-78464E457868">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:18:49 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="laboratorio" id="E249930A-D83A-189A-D299-522F68CC0E56">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:19:20 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0B895E1-DED7-1B92-9248-AA4670E27E40" name="DIM_LAB_PK">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:19:20 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D94BA19-8656-D6CE-2284-78464E457868"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

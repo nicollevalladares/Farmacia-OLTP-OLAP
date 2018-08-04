@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" name="DIM_PRODUCTO">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:15:58 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_producto" id="0EB730C4-82B5-82FF-6154-0138D7B76967">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:18:13 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="producto" id="02371E65-5A47-4E4D-BA1F-9030EA95A77B">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:18:13 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIM_LAB_id_lab" id="9D24F77A-B7CD-8F7C-1A66-58B0D43616CA">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:19:40 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6555AC0E-3215-33FC-B203-BAD2AAECA5BE" referredColumn="8D94BA19-8656-D6CE-2284-78464E457868"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3474AC05-87E2-A955-8A4D-16A6DF7D1036" name="DIM_PRODUCTO_PK">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:18:18 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EB730C4-82B5-82FF-6154-0138D7B76967"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49ED410A-911A-5A96-F1AA-2EF091ECB28E" name="DIM_LAB_FK">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:19:40 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D24F77A-B7CD-8F7C-1A66-58B0D43616CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
