@@ -16,6 +16,7 @@ DECLARE
  ORDER BY id_sucursal, id_lote, id_estante
 BEGIN
 	DELETE FROM lote_estante;
+	DELETE FROM detalle_factura;
 	OPEN c_invent
 	FETCH c_invent INTO @sucursal, @lote, @estante, @qt
 	WHILE (@@FETCH_STATUS = 0)

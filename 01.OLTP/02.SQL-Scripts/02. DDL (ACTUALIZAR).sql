@@ -94,9 +94,11 @@ CREATE TABLE factura (
   id_empleado INT NOT NULL,
   id_cliente INT NOT NULL,
   id_forma_pago INT NOT NULL,
+  id_sucursal INT NOT NULL,
   CONSTRAINT FK_empleadofac1 FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
   CONSTRAINT fk_Factura_Cliente1 FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente),
   CONSTRAINT fk_Factura_FormaPago1 FOREIGN KEY (id_forma_pago) REFERENCES forma_pago (id_forma_pago)
+  CONSTRAINT fk_Factura_Sucursal FOREIGN KEY (id_sucursal) REFERENCES sucursal (id_sucursal)
 )
 -- Tabla descuento_factura
 CREATE TABLE descuento_factura (

@@ -11,6 +11,11 @@ BEGIN
 		WHERE id_sucursal = ROUND(RAND()*(
 		SELECT max(id_sucursal) from sucursal
 		),0);
+
+		UPDATE factura 
+		SET id_sucursal = @sucursal
+		WHERE id_factura = @i;
+
 		SET @qt_item = 1 + ROUND(RAND()*3,0);
 		SET @j=1;
 		WHILE @j <= @qt_item 
