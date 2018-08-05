@@ -5,6 +5,7 @@
 <ownerDesignName>DM_VENTA</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
 <Column name="id_lugar" id="DC7183F9-A4F9-4794-AABD-75F3A22270A8">
 <createdBy>Gerardo</createdBy>
@@ -13,17 +14,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="pais" id="6E78407A-FC86-2DCE-3DDA-71F40C5F64C9">
-<createdBy>Gerardo</createdBy>
-<createdTime>2018-08-04 20:05:33 UTC</createdTime>
-<ownerDesignName>DM_VENTA</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="sucursal" id="D5FD0F1D-666F-795A-8C99-DC128049351E">
@@ -35,6 +26,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ciudad" id="459FA756-5A39-612F-A1FF-3F24849021D6">
@@ -46,6 +38,31 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departamento" id="E392B804-372A-3C5E-5FDA-04334EC72E2D">
+<createdBy>jaguilar992</createdBy>
+<createdTime>2018-08-05 03:08:41 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pais" id="6E78407A-FC86-2DCE-3DDA-71F40C5F64C9">
+<createdBy>Gerardo</createdBy>
+<createdTime>2018-08-04 20:05:33 UTC</createdTime>
+<ownerDesignName>DM_VENTA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

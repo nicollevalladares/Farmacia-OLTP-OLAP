@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="Table" objectID="79ACF077-63A6-AC1B-457C-3A9B512AD449" name="DIM_CLIENTE" seqName="seg_0"/>
-   <object objectType="Table" objectID="80FB5EB8-D77C-90B9-E71B-138FB68B43CB" name="DIM_EMPLEADO" seqName="seg_0"/>
-   <object objectType="Table" objectID="C1F5427A-8648-4851-44CF-BBE7E6D2278F" name="DIM_LAB" seqName="seg_0"/>
-   <object objectType="Table" objectID="5AE5663D-D554-828C-31D0-300E7E412B47" name="DIM_LUGAR" seqName="seg_0"/>
-   <object objectType="Table" objectID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" name="DIM_PRODUCTO" seqName="seg_0"/>
-   <object objectType="Table" objectID="CC0DA6ED-7F13-1287-4D3C-63694EB07BD1" name="DIM_TIEMPO" seqName="seg_0"/>
-   <object objectType="Table" objectID="AD21DA5F-D911-B393-F3F2-289F07A66218" name="HECHOS_VENTA" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="75B84A25-E353-56F3-0456-54EA66809EC5" name="DIM_EMPLEADO_FK" seqName="seg_0" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="80FB5EB8-D77C-90B9-E71B-138FB68B43CB"/>
-   <object objectType="FKIndexAssociation" objectID="6555AC0E-3215-33FC-B203-BAD2AAECA5BE" name="DIM_LAB_FK" seqName="seg_0" containerID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" refContainerID="C1F5427A-8648-4851-44CF-BBE7E6D2278F"/>
-   <object objectType="FKIndexAssociation" objectID="951C9E81-0C9B-B187-42CF-7ECDF3802BAB" name="DIM_LUGAR_FK" seqName="seg_0" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="5AE5663D-D554-828C-31D0-300E7E412B47"/>
-   <object objectType="FKIndexAssociation" objectID="BD6F682E-77D7-5032-031A-75B89ACDC51E" name="DIM_PRODUCTO_FK" seqName="seg_0" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B"/>
-   <object objectType="FKIndexAssociation" objectID="877F094B-EE50-2E43-CF61-EBA4B9A9AF0C" name="DIM_TIEMPO_FK" seqName="seg_0" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="CC0DA6ED-7F13-1287-4D3C-63694EB07BD1"/>
-   <object objectType="FKIndexAssociation" objectID="17F56DA1-12CE-9CCE-5B3E-485E127BCF05" name="DIM_CLIENTE_FK" seqName="seg_0" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="79ACF077-63A6-AC1B-457C-3A9B512AD449"/>
+   <object objectType="Table" objectID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" name="DIM_PRODUCTO" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="5AE5663D-D554-828C-31D0-300E7E412B47" name="DIM_LUGAR" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="79ACF077-63A6-AC1B-457C-3A9B512AD449" name="DIM_CLIENTE" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="80FB5EB8-D77C-90B9-E71B-138FB68B43CB" name="DIM_EMPLEADO" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="AD21DA5F-D911-B393-F3F2-289F07A66218" name="HECHOS_VENTA" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="C1F5427A-8648-4851-44CF-BBE7E6D2278F" name="DIM_LAB" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="CC0DA6ED-7F13-1287-4D3C-63694EB07BD1" name="DIM_TIEMPO" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="17F56DA1-12CE-9CCE-5B3E-485E127BCF05" name="DIM_CLIENTE_FK" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="79ACF077-63A6-AC1B-457C-3A9B512AD449" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="6555AC0E-3215-33FC-B203-BAD2AAECA5BE" name="DIM_LAB_FK" containerID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" refContainerID="C1F5427A-8648-4851-44CF-BBE7E6D2278F" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="75B84A25-E353-56F3-0456-54EA66809EC5" name="DIM_EMPLEADO_FK" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="80FB5EB8-D77C-90B9-E71B-138FB68B43CB" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="877F094B-EE50-2E43-CF61-EBA4B9A9AF0C" name="DIM_TIEMPO_FK" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="CC0DA6ED-7F13-1287-4D3C-63694EB07BD1" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="951C9E81-0C9B-B187-42CF-7ECDF3802BAB" name="DIM_LUGAR_FK" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="5AE5663D-D554-828C-31D0-300E7E412B47" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="BD6F682E-77D7-5032-031A-75B89ACDC51E" name="DIM_PRODUCTO_FK" containerID="AD21DA5F-D911-B393-F3F2-289F07A66218" refContainerID="0086988A-FA88-1A19-E5C6-5BD7F5359B4B" seqName="seg_0" propertyClassName="" propertyParentId="" propertySourceId="" propertyTargetId=""/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -10,24 +10,20 @@ GROUP BY s.id_sucursal, s.nombre, c.ciudad, d.departamento, p.pais
 ORDER BY p.pais;
 
 /*Tabla Dimension: Empleados*/
-SELECT 
-FROM
-INNER JOIN 
-INNER JOIN 
-INNER JOIN 
-INNER JOIN 
-GROUP BY
-ORDER BY 
+SELECT DISTINCT
+e.id_empleado
+,CONCAT(p.primer_nombre, ' ',p.segundo_nombre, ' ', p.primer_apellido, ' ',p.segundo_apellido) as empleado
+FROM factura f
+INNER JOIN empleado e
+	ON e.id_empleado = f.id_empleado
+INNER JOIN persona p
+	ON p.id_persona = e.id_persona
+;
 
 /*Tabla Dimension: Producto*/
-SELECT 
-FROM
-INNER JOIN 
-INNER JOIN 
-INNER JOIN 
-INNER JOIN 
-GROUP BY
-ORDER BY 
+SELECT *
+FROM detalle_factura df
+; 
 
 /*Tabla Dimension: Laboratorio*/
 SELECT 
