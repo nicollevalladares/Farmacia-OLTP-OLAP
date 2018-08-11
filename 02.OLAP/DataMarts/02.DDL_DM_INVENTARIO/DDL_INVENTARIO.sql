@@ -39,7 +39,7 @@ create table DIM_LUGAR_INVENTARIO(
 	constraint lugarPK primary key(id_lugar)
 );
 
-create table HECHOS_INVENTARIO_INVENTARIO(
+create table HECHOS_INVENTARIO(
 	cantidad int not null,
 	id_producto int not null,
 	id_tiempo int not null,
