@@ -21,9 +21,16 @@ INNER JOIN persona p
 ;
 
 /*Tabla Dimension: Producto*/
-SELECT *
+SELECT 
+p.id_producto
+,p.nombre as producto
+,pre.presentacion
 FROM detalle_factura df
-; 
+INNER JOIN lote l ON l.id_lote = df.id_lote
+INNER JOIN producto p ON p.id_producto = l.id_producto
+INNER JOIN presentacion pre ON p.id_presentacion = pre.id_presentacion
+GROUP BY p.id_producto,p.nombre,pre.presentacion
+;
 
 /*Tabla Dimension: Laboratorio*/
 SELECT 
