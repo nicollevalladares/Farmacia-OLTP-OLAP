@@ -1,61 +1,59 @@
 
 CREATE TABLE DIM_CLIENTE (
-  id_cliente INTEGER NOT NULL ,
-  cliente    VARCHAR2 (255)
+  id_cliente INT NOT NULL,
+  cliente    VARCHAR (255)
 );
-
 ALTER TABLE DIM_CLIENTE_VENTA ADD CONSTRAINT DIM_CLIENTE_PK PRIMARY KEY ( id_cliente );
 
 CREATE TABLE DIM_EMPLEADO_VENTA(
-  id_empleado INTEGER NOT NULL ,
-  empleado    VARCHAR2 (255)
+  id_empleado INT NOT NULL,
+  empleado    VARCHAR (255)
 );
-
 ALTER TABLE DIM_EMPLEADO_VENTA ADD CONSTRAINT DIM_EMPLEADO_PK PRIMARY KEY ( id_empleado );
 
 CREATE TABLE DIM_LAB_VENTA(
-  id_lab      INTEGER NOT NULL ,
-  laboratorio VARCHAR2 (255)
+  id_lab      INT NOT NULL,
+  laboratorio VARCHAR (255)
 );
-
 ALTER TABLE DIM_LAB_VENTA ADD CONSTRAINT DIM_LAB_PK PRIMARY KEY ( id_lab );
 
 CREATE TABLE DIM_LUGA_VENTAR (
-  id_lugar INTEGER NOT NULL ,
-  pais     VARCHAR2 (255) ,
-  sucursal VARCHAR2 (255) ,
-  ciudad   VARCHAR2 (255)
+  id_lugar INT NOT NULL,
+  pais     VARCHAR (255),
+  ciudad   VARCHAR (255)
+  sucursal VARCHAR (255)
 );
-
 ALTER TABLE DIM_LUGAR_VENTA ADD CONSTRAINT DIM_LUGAR_PK PRIMARY KEY ( id_lugar );
 
 CREATE TABLE DIM_PRODUCTO_VENTA (
-  id_producto    INTEGER NOT NULL ,
-  producto       VARCHAR2 (255) ,
-  DIM_LAB_id_lab INTEGER NOT NULL
+  id_producto    INT NOT NULL,
+  producto       VARCHAR (255),
+  DIM_LAB_id_lab INT NOT NULL
 );
-
 ALTER TABLE DIM_PRODUCTO_VENTA ADD CONSTRAINT DIM_PRODUCTO_PK PRIMARY KEY ( id_producto );
 
 CREATE TABLE DIM_TIEMPO_VENTA (
-  id_tiempo INTEGER NOT NULL ,
-  dia       INTEGER ,
-  mes       INTEGER ,
-  año       INTEGER ,
-  trimestre INTEGER ,
-  venta     INTEGER
+  id_tiempo   INT NOT NULL,
+  dia         INT NOT NULL,
+  semana      INT NOT NULL,
+  mes         INT NOT NULL,
+  trimestre   INT NOT NULL,
+  semestre    INT NOT NULL,
+  anio        INT NOT NULL,
+  fecha_venta INT NOT NULL
 );
 ALTER TABLE DIM_TIEMPO_VENTA ADD CONSTRAINT DIM_TIEMPO_PK PRIMARY KEY ( id_tiempo );
 
+-- Tabla Principal
 CREATE TABLE HECHOS_VENTA (
-  id_venta                 INTEGER NOT NULL ,
-  total_vendido            NUMBER (7,2) ,
-  cantidad                 INTEGER ,
-  DIM_TIEMPO_id_tiempo     INTEGER NOT NULL ,
-  DIM_LUGAR_id_lugar       INTEGER NOT NULL ,
-  DIM_EMPLEADO_id_empleado INTEGER NOT NULL ,
-  DIM_PRODUCTO_id_producto INTEGER NOT NULL ,
-  DIM_CLIENTE_id_cliente   INTEGER NOT NULL
+  id_venta                 INT NOT NULL,
+  total_vendido            NUMBER (7,2),
+  cantidad                 INT,
+  DIM_TIEMPO_id_tiempo     INT NOT NULL,
+  DIM_LUGAR_id_lugar       INT NOT NULL,
+  DIM_EMPLEADO_id_empleado INT NOT NULL,
+  DIM_PRODUCTO_id_producto INT NOT NULL,
+  DIM_CLIENTE_id_cliente   INT NOT NULL
 );
 
 ALTER TABLE HECHOS_VENTA ADD CONSTRAINT HECHOS_VENTA_PK PRIMARY KEY ( id_venta );
@@ -71,4 +69,3 @@ ALTER TABLE HECHOS_VENTA ADD CONSTRAINT DIM_LUGAR_FK FOREIGN KEY ( DIM_LUGAR_id_
 ALTER TABLE HECHOS_VENTA ADD CONSTRAINT DIM_PRODUCTO_FK FOREIGN KEY ( DIM_PRODUCTO_id_producto ) REFERENCES DIM_PRODUCTO_VENTA ( id_producto );
 
 ALTER TABLE HECHOS_VENTA ADD CONSTRAINT DIM_TIEMPO_FK FOREIGN KEY ( DIM_TIEMPO_id_tiempo ) REFERENCES DIM_TIEMPO_VENTA ( id_tiempo );
-

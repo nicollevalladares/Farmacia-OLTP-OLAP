@@ -1,50 +1,55 @@
-use DW_INVENTARIO;
 
-create table DIM_TIEMPO_INVENTARIO(
-	id_tiempo int identity(1,1) not null,
-	mes int not null,
-	año int not null,
-	semestre int not null,	 
-	trimestre int not null,
-	constraint tiempoPK primary key(id_tiempo)
+CREATE TABLE DIM_TIEMPO_INVENTARIO (
+	id_tiempo INT NOT NULL,
+	dia 			INT NOT NULL,
+	semana 		INT NOT NULL,
+	mes 			INT NOT NULL,
+	trimestre INT NOT NULL,
+	semestre 	INT NOT NULL,	 
+	anio 			INT NOT NULL,
+	fecha_inv INT NOT NULL,
+ 	CONSTRAINT tiempoPK PRIMARY KEY(id_tiempo)
 );
 
-create table DIM_LOTE_INVENTARIO(
-	id_lote int not null,
-	lote varchar(100),
-	constraint lotePK primary key(id_lote)
+CREATE TABLE DIM_LOTE_INVENTARIO (
+	id_lote INT NOT NULL,
+	lote 		VARCHAR(255),
+	CONSTRAINT lotePK PRIMARY KEY(id_lote)
 );
 
-create table DIM_LAB_INVENTARIO(
-	id_lab int not null,
-	laboratorio varchar(255) not null,
-	constraint labPK primary key(id_lab)
+CREATE TABLE DIM_LAB_INVENTARIO (
+	id_lab 			INT NOT NULL,
+	laboratorio VARCHAR(255) NOT NULL,
+	CONSTRAINT labPK PRIMARY KEY(id_lab)
 );
 
-create table DIM_PRODUCTO_INVENTARIO(
-	id_producto int not null,
-	producto varchar(100) not null,
-	id_lab int not null,
-	id_lote int not null,
-	constraint productoPK primary key(id_producto),
-	constraint labFK foreign key(id_lab) references DIM_LAB_INVENTARIO(id_lab),
-	constraint loteFK foreign key(id_lote) references DIM_LOTE_INVENTARIO(id_lote)
+CREATE TABLE DIM_PRODUCTO_INVENTARIO (
+	id_producto INT NOT NULL,
+	producto 		VARCHAR(255) NOT NULL,
+	id_lab 			INT NOT NULL,
+	id_lote 		INT NOT NULL,
+	CONSTRAINT productoPK PRIMARY KEY(id_producto),
+	CONSTRAINT labFK FOREIGN KEY(id_lab) REFERENCES DIM_LAB_INVENTARIO(id_lab),
+	CONSTRAINT loteFK FOREIGN KEY(id_lote) REFERENCES DIM_LOTE_INVENTARIO(id_lote)
 );
 
-create table DIM_LUGAR_INVENTARIO(
-	id_lugar int not null,
-	pais varchar(50) not null,
-	ciudad varchar(100) not null,
-	sucursal varchar(50) not null,
-	constraint lugarPK primary key(id_lugar)
+CREATE TABLE DIM_LUGAR_INVENTARIO (
+	id_lugar 	INT NOT NULL,
+	pais 			VARCHAR(255) NOT NULL,
+	ciudad 		VARCHAR(255) NOT NULL,
+	sucursal 	VARCHAR(255) NOT NULL,
+	CONSTRAINT lugarPK PRIMARY KEY(id_lugar)
 );
 
-create table HECHOS_INVENTARIO(
-	cantidad int not null,
-	id_producto int not null,
-	id_tiempo int not null,
-	id_lugar int not null,
-	constraint productoFK foreign key(id_producto) references DIM_PRODUCTO_INVENTARIO(id_producto),
-	constraint tiempoFK foreign key(id_tiempo) references DIM_TIEMPO_INVENTARIO(id_tiempo),
-	constraint lugarFK foreign key(id_lugar) references DIM_LUGAR_INVENTARIO(id_lugar)
+-- Tabla Principal
+CREATE TABLE HECHOS_INVENTARIO (
+	id_inventario INT NOT NULL,
+	cantidad 			INT NOT NULL,
+	id_producto 	INT NOT NULL,
+	id_tiempo 		INT NOT NULL,
+	id_lugar 			INT NOT NULL,
+	CONSTRAINT inventarioPK PRIMARY KEY(id_inventario),
+	CONSTRAINT productoFK FOREIGN KEY(id_producto) REFERENCES DIM_PRODUCTO_INVENTARIO(id_producto),
+	CONSTRAINT tiempoFK FOREIGN KEY(id_tiempo) REFERENCES DIM_TIEMPO_INVENTARIO(id_tiempo),
+	CONSTRAINT lugarFK FOREIGN KEY(id_lugar) REFERENCES DIM_LUGAR_INVENTARIO(id_lugar)
 );
