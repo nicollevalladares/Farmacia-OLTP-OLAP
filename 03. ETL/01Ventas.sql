@@ -1,17 +1,14 @@
 /*Tabla Dimension: Tiempo*/
 SELECT DISTINCT
+	ROW_NUMBER () OVER (ORDER BY fecha ASC) id_tiempo,
 	CONVERT (DATE, fecha) fecha_venta,
 	DATEPART (YEAR, fecha) año,
 	DATEPART (QUARTER, fecha) trimestre,  
 	DATEPART (MONTH, fecha) mes, 
 	DATEPART (WEEK, fecha) semana, 
-	DATENAME (WEEKDAY, fecha) dia_semana, 
-	ROW_NUMBER () OVER (ORDER BY fecha ASC) id_tiempo
+	DATENAME (WEEKDAY, fecha) dia_semana
 FROM factura fac
-INNER JOIN detalle_factura defa ON fac.id_factura = defa.id_factura
-INNER JOIN lote lot ON defa.id_lote = lot.id_lote
-INNER JOIN producto pro ON lot.id_producto = pro.id_producto
-GROUP BY fac.id_factura,
+GROUP BY
 	CONVERT (DATE, fecha),
 	DATEPART (YEAR, fecha),
 	DATEPART (QUARTER, fecha),
@@ -82,23 +79,16 @@ INNER JOIN persona p
 
 /*Tabla Principal: Hechos Venta*/
 SELECT 
- ROW_NUMBER() OVER(ORDER BY f.fecha) as id_tiempo,
- f.fecha,
- f.id_factura,
+ t.id_tiempo,
+ f.fecha, f.id_factura,
  f.id_sucursal as id_lugar,
- f.id_empleado,
- f.id_cliente,
- p.id_producto,
- df.cantidad,
+ f.id_empleado,f.id_cliente,p.id_producto,df.cantidad,
  l.precio_venta * df.cantidad as total_vendido
 FROM detalle_factura df
-INNER JOIN factura f
-	ON df.id_factura = f.id_factura
-INNER JOIN lote l
-	ON df.id_lote = l.id_lote
-INNER JOIN producto p
-	ON p.id_producto = l.id_producto
+INNER JOIN factura f ON df.id_factura = f.id_factura
+INNER JOIN (SELECT ROW_NUMBER() OVER(ORDER BY fecha ASC) as id_tiempo, ft.fecha FROM factura ft GROUP BY ft.fecha) t ON f.fecha = t.fecha
+INNER JOIN lote l ON df.id_lote = l.id_lote
+INNER JOIN producto p ON p.id_producto = l.id_producto
 ;
-
 
 
