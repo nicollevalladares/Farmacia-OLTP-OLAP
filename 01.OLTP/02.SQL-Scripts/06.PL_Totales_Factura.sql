@@ -21,5 +21,7 @@ BEGIN
     UPDATE factura SET costo_total = @total WHERE id_factura = @factura;
     FETCH c_totales INTO @factura, @total
   END
+  CLOSE c_totales
+  DEALLOCATE c_totales
 END
 GO
