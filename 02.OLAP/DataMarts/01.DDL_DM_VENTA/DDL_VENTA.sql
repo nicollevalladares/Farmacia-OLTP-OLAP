@@ -6,7 +6,7 @@ CREATE TABLE DIM_TIEMPO_VENTA (
   mes         INT NOT NULL,
   trimestre   INT NOT NULL,
   anio        INT NOT NULL,
-  fecha_venta INT NOT NULL
+  fecha_venta DATE NOT NULL
 );
 ALTER TABLE DIM_TIEMPO_VENTA ADD CONSTRAINT DIM_TIEMPO_PK PRIMARY KEY ( id_tiempo );
 
