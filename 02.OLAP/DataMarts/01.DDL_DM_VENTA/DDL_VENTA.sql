@@ -1,7 +1,7 @@
 
 CREATE TABLE DIM_TIEMPO_VENTA (
   id_tiempo   INT NOT NULL,
-  dia         INT NOT NULL,
+  dia         VARCHAR(50) NOT NULL,
   semana      INT NOT NULL,
   mes         INT NOT NULL,
   trimestre   INT NOT NULL,

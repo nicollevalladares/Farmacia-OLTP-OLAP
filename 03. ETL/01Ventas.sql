@@ -1,12 +1,12 @@
 /*Tabla Dimension: Tiempo*/
 SELECT DISTINCT
-	ROW_NUMBER () OVER (ORDER BY fecha ASC) id_tiempo,
-	CONVERT (DATE, fecha) fecha_venta,
-	DATEPART (YEAR, fecha) año,
-	DATEPART (QUARTER, fecha) trimestre,  
-	DATEPART (MONTH, fecha) mes, 
-	DATEPART (WEEK, fecha) semana, 
-	DATENAME (WEEKDAY, fecha) dia_semana
+	ROW_NUMBER () OVER (ORDER BY fecha ASC) id_tiempo
+	,DATENAME (WEEKDAY, fecha) dia_semana
+	,DATEPART (WEEK, fecha) semana
+	,DATEPART (MONTH, fecha) mes
+	,DATEPART (QUARTER, fecha) trimestre
+	,DATEPART (YEAR, fecha) año
+	,CONVERT (DATE, fecha) fecha_venta
 FROM factura fac
 GROUP BY
 	CONVERT (DATE, fecha),
