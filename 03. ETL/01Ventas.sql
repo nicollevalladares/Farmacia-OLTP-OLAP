@@ -78,17 +78,20 @@ INNER JOIN persona p
 ;
 
 /*Tabla Principal: Hechos Venta*/
+/*Tabla Principal: Hechos Venta*/
 SELECT 
+ ROW_NUMBER() OVER(ORDER BY f.id_factura ASC) id_venta,
  t.id_tiempo,
- f.fecha, f.id_factura,
  f.id_sucursal as id_lugar,
- f.id_empleado,f.id_cliente,p.id_producto,df.cantidad,
+ f.id_empleado,
+ f.id_cliente,
+ p.id_producto,
+ df.cantidad,
  l.precio_venta * df.cantidad as total_vendido
 FROM detalle_factura df
 INNER JOIN factura f ON df.id_factura = f.id_factura
 INNER JOIN (SELECT ROW_NUMBER() OVER(ORDER BY fecha ASC) as id_tiempo, ft.fecha FROM factura ft GROUP BY ft.fecha) t ON f.fecha = t.fecha
 INNER JOIN lote l ON df.id_lote = l.id_lote
 INNER JOIN producto p ON p.id_producto = l.id_producto
+ORDER BY id_venta
 ;
-
-
