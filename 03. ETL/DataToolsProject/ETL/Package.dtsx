@@ -11,8 +11,8 @@
   DTS:LocaleID="18442"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{8D8CF31B-B440-4903-A8AC-AFDA1B802913}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{22DBE289-2125-4064-AF29-3385D549CFDD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,7 +37,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiMXLpRbJnUuVuZjRnhuChgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAUNnP37tBOIyBC94biykpa6JVvey5D4yN09Zi+NJhrdQAAAAAOgAAAAAIAACAAAADbN6TBrACn4/HN3I0XohvASRiXTJH6n6PfZ3XPpCxFIBAAAAAoL+gnfd6zW/r85WSyUT5cQAAAABNozv+sLupZc1YSb69+guKP1VBEEkFbBGT/EFALJnBo0d8PA0gUIXnCyflXRHV8L2rYF7C0qIwrj0X64QREzt4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiMXLpRbJnUuVuZjRnhuChgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAjJ3YHWvEOkrOQqVgM2i2ztxQOUUQZa/AQqxIvLtfa1wAAAAAOgAAAAAIAACAAAABNgNtKayel1R9f1aOLjJExFIY4k8lXLw6vgsViVhAXLBAAAABJExUNFb+0u8xlP1P/JBFbQAAAAL0vkfZR6F6aUjQcikG8cJIiTPh29Y2QjxnkxK7f6G7ufV1WT5Ylhc8Ez3IWD5QRiqgsYOEHykL4TTvXcdEI27A</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -517,110 +517,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Data Conversion Laboratorio"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion Laboratorio"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input].Columns[id_lab]"
-                      cachedDataType="i4"
-                      cachedName="id_lab"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[id_lab]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input].Columns[laboratorio]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="laboratorio"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[laboratorio]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[id_lab]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[id_lab]"
-                      name="id_lab"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[id_lab]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[laboratorio]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[laboratorio]"
-                      name="laboratorio"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[laboratorio]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Data Conversion Lugar"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -843,10 +739,12 @@
                       cachedName="presentacion"
                       lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[presentacion]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion Producto.Inputs[Data Conversion Input].Columns[id_laboratorio]"
-                      cachedDataType="i4"
-                      cachedName="id_laboratorio"
-                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[id_laboratorio]" />
+                      refId="Package\Data Flow Task\Data Conversion Producto.Inputs[Data Conversion Input].Columns[laboratorio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="laboratorio"
+                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[laboratorio]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -923,19 +821,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[id_laboratorio]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[laboratorio]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[id_laboratorio]"
-                      name="id_laboratorio"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[laboratorio]"
+                      name="laboratorio"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[id_laboratorio]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[laboratorio]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1452,133 +1352,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination Laboratorio"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination Laboratorio"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIM_LAB_VENTA]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ASUS-X55LB.FarmaciaOLAP.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[ASUS-X55LB.FarmaciaOLAP.sa]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="IgnoreFailure"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].Columns[id_lab]"
-                      cachedDataType="i4"
-                      cachedName="id_lab"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].ExternalColumns[id_lab]"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[id_lab]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].Columns[laboratorio]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="laboratorio"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].ExternalColumns[laboratorio]"
-                      lineageId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output].Columns[laboratorio]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].ExternalColumns[id_lab]"
-                      dataType="i4"
-                      name="id_lab" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input].ExternalColumns[laboratorio]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="laboratorio" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination Laboratorio.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Laboratorio.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination Laboratorio.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\OLE DB Destination Lugar"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1842,11 +1615,13 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[presentacion]"
                       lineageId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[presentacion]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[id_laboratorio]"
-                      cachedDataType="i4"
-                      cachedName="id_laboratorio"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[id_lab]"
-                      lineageId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[id_laboratorio]" />
+                      refId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[laboratorio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="laboratorio"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[laboratorio]"
+                      lineageId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output].Columns[laboratorio]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1867,9 +1642,11 @@
                       length="50"
                       name="presentacion" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[id_lab]"
-                      dataType="i4"
-                      name="id_lab" />
+                      refId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[laboratorio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="laboratorio" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2172,12 +1949,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[id_producto]"
                       lineageId="Package\Data Flow Task\Data Conversion Hechos Venta.Outputs[Data Conversion Output].Columns[id_producto]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].Columns[cantidad]"
-                      cachedDataType="i4"
-                      cachedName="cantidad"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[cantidad]"
-                      lineageId="Package\Data Flow Task\Data Conversion Hechos Venta.Outputs[Data Conversion Output].Columns[cantidad]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].Columns[total_vendido]"
                       cachedDataType="r8"
                       cachedName="total_vendido"
@@ -2195,6 +1966,12 @@
                       cachedName="id_lugar"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[id_lugar]"
                       lineageId="Package\Data Flow Task\Data Conversion Hechos Venta.Outputs[Data Conversion Output].Columns[id_lugar]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].Columns[cantidad]"
+                      cachedDataType="i4"
+                      cachedName="cantidad"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[cantidad]"
+                      lineageId="Package\Data Flow Task\Data Conversion Hechos Venta.Outputs[Data Conversion Output].Columns[cantidad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2223,13 +2000,13 @@
                       dataType="i4"
                       name="id_producto" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[cantidad]"
-                      dataType="i4"
-                      name="cantidad" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[total_vendido]"
                       dataType="r8"
                       name="total_vendido" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input].ExternalColumns[cantidad]"
+                      dataType="i4"
+                      name="cantidad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2283,8 +2060,8 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">/*Tabla Principal: Hechos Venta*/
-SELECT 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+ f.fecha,
  ROW_NUMBER() OVER(ORDER BY f.id_factura ASC) id_venta,
  t.id_tiempo,
  f.id_sucursal as id_lugar,
@@ -2298,7 +2075,7 @@ INNER JOIN factura f ON df.id_factura = f.id_factura
 INNER JOIN (SELECT ROW_NUMBER() OVER(ORDER BY fecha ASC) as id_tiempo, ft.fecha FROM factura ft GROUP BY ft.fecha) t ON f.fecha = t.fecha
 INNER JOIN lote l ON df.id_lote = l.id_lote
 INNER JOIN producto p ON p.id_producto = l.id_producto
-ORDER BY id_venta
+ORDER by f.fecha
 ;</property>
                 <property
                   dataType="System.String"
@@ -2407,6 +2184,15 @@ ORDER BY id_venta
                       lineageId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].Columns[total_vendido]"
                       name="total_vendido"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].Columns[fecha]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                      lineageId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].Columns[fecha]"
+                      name="fecha"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2442,6 +2228,10 @@ ORDER BY id_venta
                       refId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].ExternalColumns[total_vendido]"
                       dataType="r8"
                       name="total_vendido" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                      dataType="dbDate"
+                      name="fecha" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2449,6 +2239,11 @@ ORDER BY id_venta
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                      name="fecha" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Error Output].Columns[id_venta]"
                       dataType="i8"
@@ -3003,141 +2798,6 @@ INNER JOIN persona p
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source Laboratorio"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source Laboratorio"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">/*Tabla Dimension: Laboratorio*/
-SELECT lab.id_laboratorio as id_lab, 
-	lab.nombre_laboratorio as laboratorio
-FROM laboratorio lab
-GROUP BY lab.id_laboratorio, lab.nombre_laboratorio
-ORDER BY lab.id_laboratorio;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Source Laboratorio.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ASUS-X55LB.Farmacia]"
-                  connectionManagerRefId="Package.ConnectionManagers[ASUS-X55LB.Farmacia]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[id_lab]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].ExternalColumns[id_lab]"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[id_lab]"
-                      name="id_lab"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[laboratorio]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].ExternalColumns[laboratorio]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].Columns[laboratorio]"
-                      name="laboratorio"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].ExternalColumns[id_lab]"
-                      dataType="i4"
-                      name="id_lab" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output].ExternalColumns[laboratorio]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="laboratorio" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[id_lab]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[id_lab]"
-                      name="id_lab" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[laboratorio]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[laboratorio]"
-                      name="laboratorio" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\OLE DB Source Producto"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -3166,13 +2826,14 @@ ORDER BY lab.id_laboratorio;</property>
 SELECT p.id_producto
 	,p.nombre as producto
 	,pre.presentacion
-	,m.id_laboratorio
+	,lab.nombre_laboratorio as laboratorio
 FROM detalle_factura df
 INNER JOIN lote l ON l.id_lote = df.id_lote
 INNER JOIN producto p ON p.id_producto = l.id_producto
 INNER JOIN medicamentos m ON m.id_producto = p.id_producto
+INNER JOIN laboratorio lab ON lab.id_laboratorio = m.id_laboratorio
 INNER JOIN presentacion pre ON p.id_presentacion = pre.id_presentacion
-GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio
+GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio,lab.nombre_laboratorio
 ;</property>
                 <property
                   dataType="System.String"
@@ -3241,13 +2902,15 @@ GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio
                       name="presentacion"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[id_laboratorio]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[laboratorio]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].ExternalColumns[id_laboratorio]"
-                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[id_laboratorio]"
-                      name="id_laboratorio"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].ExternalColumns[laboratorio]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].Columns[laboratorio]"
+                      name="laboratorio"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3269,9 +2932,11 @@ GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio
                       length="50"
                       name="presentacion" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].ExternalColumns[id_laboratorio]"
-                      dataType="i4"
-                      name="id_laboratorio" />
+                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output].ExternalColumns[laboratorio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="laboratorio" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3299,10 +2964,12 @@ GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio
                       lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[presentacion]"
                       name="presentacion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[id_laboratorio]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[id_laboratorio]"
-                      name="id_laboratorio" />
+                      refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[laboratorio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[laboratorio]"
+                      name="laboratorio" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -3573,24 +3240,19 @@ GROUP BY
               startId="Package\Data Flow Task\Data Conversion Empleado.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output3]"
-              endId="Package\Data Flow Task\OLE DB Destination Laboratorio.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Laboratorio.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
-              endId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
               endId="Package\Data Flow Task\OLE DB Hechos Venta.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Hechos Venta.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output6]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
               endId="Package\Data Flow Task\OLE DB Destination Lugar.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion Lugar.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output5]"
+              endId="Package\Data Flow Task\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion Producto.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Data Conversion Tiempo.Inputs[Data Conversion Input]"
@@ -3608,24 +3270,19 @@ GROUP BY
               startId="Package\Data Flow Task\OLE DB Source Empleado.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output3]"
-              endId="Package\Data Flow Task\Data Conversion Laboratorio.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source Laboratorio.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output4]"
-              endId="Package\Data Flow Task\Data Conversion Producto.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output5]"
               endId="Package\Data Flow Task\Data Conversion Hechos Venta.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\OLE DB Hechos Ventas.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output6]"
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output4]"
               endId="Package\Data Flow Task\Data Conversion Lugar.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\OLE DB Lugar.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output5]"
+              endId="Package\Data Flow Task\Data Conversion Producto.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source Producto.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3654,94 +3311,116 @@ GROUP BY
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Data Flow Task\OLE DB Source Tiempo"
-          TopLeft="21.5714285714286,21.4285714285714" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="174,42"
-          Id="Package\Data Flow Task\Data Conversion Producto"
-          TopLeft="899,93" />
-        <NodeLayout
-          Size="179,42"
           Id="Package\Data Flow Task\OLE DB Destination Producto"
-          TopLeft="893,164" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Data Conversion Laboratorio"
-          TopLeft="691,97" />
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Data Flow Task\Data Conversion Hechos Venta"
-          TopLeft="259.75,315.75" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Data Flow Task\OLE DB Lugar"
-          TopLeft="28.75,251.25" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Data Flow Task\OLE DB Source Laboratorio"
-          TopLeft="691,16" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Data Flow Task\OLE DB Source Empleado"
-          TopLeft="462,17" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\Data Flow Task\OLE DB Destination Laboratorio"
-          TopLeft="680,163" />
-        <NodeLayout
-          Size="186,42"
-          Id="Package\Data Flow Task\OLE DB Destination Tiempo"
-          TopLeft="13,169" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Data Flow Task\Data Conversion Tiempo"
-          TopLeft="16,93" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Data Flow Task\OLE DB Source Producto"
-          TopLeft="899,12" />
+          TopLeft="673.333333333333,173.333333333333" />
         <NodeLayout
           Size="186,42"
           Id="Package\Data Flow Task\OLE DB Destination Cliente"
           TopLeft="235,171" />
         <NodeLayout
-          Size="202,42"
-          Id="Package\Data Flow Task\OLE DB Hechos Venta"
-          TopLeft="266.892857142857,405.75" />
+          Size="195,42"
+          Id="Package\Data Flow Task\OLE DB Source Producto"
+          TopLeft="668.888888888889,17.7777777777778" />
         <NodeLayout
-          Size="183,42"
-          Id="Package\Data Flow Task\Data Conversion Empleado"
-          TopLeft="462,98" />
+          Size="186,42"
+          Id="Package\Data Flow Task\Data Conversion Lugar"
+          TopLeft="889.821428571429,111.071428571429" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Data Flow Task\Data Conversion Hechos Venta"
+          TopLeft="259.75,315.75" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task\OLE DB Source Empleado"
+          TopLeft="462,17" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Data Flow Task\OLE DB Destination Empleado"
+          TopLeft="463,168" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Data Flow Task\OLE DB Destination Tiempo"
+          TopLeft="13,169" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Data Flow Task\Data Conversion Producto"
+          TopLeft="677.777777777778,95.5555555555556" />
         <NodeLayout
           Size="210,42"
           Id="Package\Data Flow Task\OLE DB Hechos Ventas"
           TopLeft="257.75,245.75" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Data Flow Task\Data Conversion Lugar"
-          TopLeft="31.25,332.5" />
+          Size="183,42"
+          Id="Package\Data Flow Task\OLE DB Hechos Venta"
+          TopLeft="266.892857142857,405.75" />
         <NodeLayout
-          Size="201,42"
-          Id="Package\Data Flow Task\OLE DB Destination Lugar"
-          TopLeft="21.25,416.25" />
+          Size="145,42"
+          Id="Package\Data Flow Task\OLE DB Lugar"
+          TopLeft="887.321428571429,29.8214285714285" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Data Flow Task\Data Conversion Cliente"
-          TopLeft="242,88" />
+          Size="188,42"
+          Id="Package\Data Flow Task\OLE DB Source Tiempo"
+          TopLeft="21.5714285714286,21.4285714285714" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Data Flow Task\Data Conversion Empleado"
+          TopLeft="462,98" />
         <NodeLayout
           Size="173,42"
           Id="Package\Data Flow Task\OLE DB Source Cliente"
           TopLeft="248,21" />
         <NodeLayout
-          Size="190,42"
-          Id="Package\Data Flow Task\OLE DB Destination Empleado"
-          TopLeft="463,168" />
+          Size="201,42"
+          Id="Package\Data Flow Task\OLE DB Destination Lugar"
+          TopLeft="878.392857142858,194.821428571428" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Data Flow Task\Data Conversion Tiempo"
+          TopLeft="16,93" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Data Flow Task\Data Conversion Cliente"
+          TopLeft="242,88" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output6]"
-          TopLeft="101.25,293.25">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output5]"
+          TopLeft="766.388888888889,59.7777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.8888888888889,35.7777777777778"
+              Start="0,0"
+              End="11.8888888888889,28.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8888888888889"
+                    Point2="0,17.8888888888889"
+                    Point3="4,17.8888888888889" />
+                  <mssgle:LineSegment
+                    End="7.88888888888891,17.8888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.88888888888891,17.8888888888889"
+                    Point2="11.8888888888889,17.8888888888889"
+                    Point3="11.8888888888889,21.8888888888889" />
+                  <mssgle:LineSegment
+                    End="11.8888888888889,28.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output4]"
+          TopLeft="959.821428571429,71.8214285714286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3774,7 +3453,7 @@ GROUP BY
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output5]"
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
           TopLeft="362.25,287.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3787,50 +3466,6 @@ GROUP BY
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output4]"
-          TopLeft="985.75,54">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
-          TopLeft="772.75,58">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3906,19 +3541,31 @@ GROUP BY
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
-          TopLeft="123,374.5">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
+          TopLeft="778.277777777778,137.555555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.75"
+              EndConnector="-17.9444444444443,35.7777777777778"
               Start="0,0"
-              End="0,34.25">
+              End="-17.9444444444443,28.2777777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.25" />
+                    End="0,13.8888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8888888888889"
+                    Point2="0,17.8888888888889"
+                    Point3="-4,17.8888888888889" />
+                  <mssgle:LineSegment
+                    End="-13.9444444444443,17.8888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.9444444444443,17.8888888888889"
+                    Point2="-17.9444444444443,17.8888888888889"
+                    Point3="-17.9444444444443,21.8888888888889" />
+                  <mssgle:LineSegment
+                    End="-17.9444444444443,28.2777777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3928,8 +3575,30 @@ GROUP BY
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
-          TopLeft="364.821428571429,357.75">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
+          TopLeft="980.857142857143,153.071428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.749999999999"
+              Start="0,0"
+              End="0,34.249999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.249999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
+          TopLeft="360.071428571429,357.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3941,50 +3610,6 @@ GROUP BY
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
-          TopLeft="984.25,135">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
-          TopLeft="772,139">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24"
-              Start="0,0"
-              End="0,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4063,14 +3688,6 @@ GROUP BY
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source Tiempo">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Destination Producto">
     <Properties>
       <Property>
@@ -4084,15 +3701,20 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Lugar">
+    design-time-name="Package\Data Flow Task\OLE DB Destination Cliente">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source Laboratorio">
+    design-time-name="Package\Data Flow Task\OLE DB Source Producto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4108,7 +3730,7 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination Laboratorio">
+    design-time-name="Package\Data Flow Task\OLE DB Destination Empleado">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4134,23 +3756,10 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source Producto">
+    design-time-name="Package\Data Flow Task\OLE DB Hechos Ventas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination Cliente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4168,7 +3777,7 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Hechos Ventas">
+    design-time-name="Package\Data Flow Task\OLE DB Lugar">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4176,15 +3785,10 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination Lugar">
+    design-time-name="Package\Data Flow Task\OLE DB Source Tiempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4197,7 +3801,7 @@ GROUP BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination Empleado">
+    design-time-name="Package\Data Flow Task\OLE DB Destination Lugar">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

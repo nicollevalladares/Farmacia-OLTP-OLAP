@@ -41,21 +41,22 @@ GROUP BY s.id_sucursal,
 SELECT p.id_producto
 	,p.nombre as producto
 	,pre.presentacion
-	,m.id_laboratorio
+	,lab.nombre_laboratorio as laboratorio
 FROM detalle_factura df
 INNER JOIN lote l ON l.id_lote = df.id_lote
 INNER JOIN producto p ON p.id_producto = l.id_producto
 INNER JOIN medicamentos m ON m.id_producto = p.id_producto
+INNER JOIN laboratorio lab ON lab.id_laboratorio = m.id_laboratorio
 INNER JOIN presentacion pre ON p.id_presentacion = pre.id_presentacion
-GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio
+GROUP BY p.id_producto,p.nombre,pre.presentacion,m.id_laboratorio,lab.nombre_laboratorio
 ;
 
 /*Tabla Dimension: Laboratorio*/
-SELECT lab.id_laboratorio as id_lab, 
-	lab.nombre_laboratorio as laboratorio
-FROM laboratorio lab
-GROUP BY lab.id_laboratorio, lab.nombre_laboratorio
-ORDER BY lab.id_laboratorio;
+-- SELECT lab.id_laboratorio as id_lab, 
+-- 	lab.nombre_laboratorio as laboratorio
+-- FROM laboratorio lab
+-- GROUP BY lab.id_laboratorio, lab.nombre_laboratorio
+-- ORDER BY lab.id_laboratorio;
 
 /*Tabla Dimension: Cliente*/
 SELECT DISTINCT
@@ -78,8 +79,8 @@ INNER JOIN persona p
 ;
 
 /*Tabla Principal: Hechos Venta*/
-/*Tabla Principal: Hechos Venta*/
 SELECT 
+ f.fecha,
  ROW_NUMBER() OVER(ORDER BY f.id_factura ASC) id_venta,
  t.id_tiempo,
  f.id_sucursal as id_lugar,
@@ -93,5 +94,5 @@ INNER JOIN factura f ON df.id_factura = f.id_factura
 INNER JOIN (SELECT ROW_NUMBER() OVER(ORDER BY fecha ASC) as id_tiempo, ft.fecha FROM factura ft GROUP BY ft.fecha) t ON f.fecha = t.fecha
 INNER JOIN lote l ON df.id_lote = l.id_lote
 INNER JOIN producto p ON p.id_producto = l.id_producto
-ORDER BY id_venta
+ORDER by id_venta
 ;
